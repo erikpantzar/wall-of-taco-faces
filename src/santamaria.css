@@ -1,0 +1,15 @@
+tacowall {
+	width: 100%;
+	display: flex;
+}
+
+taco {
+	max-width: 340px;
+	display: inline-block;
+	float: left;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}

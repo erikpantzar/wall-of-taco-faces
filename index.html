@@ -6,28 +6,17 @@
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="src/app.js"></script>
 	<script src="src/wall.js"></script>
-	<style>
+	<script src="src/taco.js"></script>
+	<link rel="stylesheet" href="src/santamaria.css">
 
-		tacowall {
-			width: 100%;
-			display: flex;
-		}
-
-		taco {
-			max-width: 340px;
-			display: inline-block;
-			float: left;
-		}
-
-		img {
-			max-width: 100%;
-			display: block;
-		}
-	</style>
 </head>
 <body ng-app="tacowall" ng-controller="appController as appVm">
 
-<tacowall ingredients="appVm.listOfImages"></tacowall>
+	<tacowall
+		ingredients="appVm.listOfImages"
+		amount="3"
+		intervall="5">
+	</tacowall>
 
 </body>
 </html>
