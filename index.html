@@ -1,29 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Angular 2 QuickStart</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/styles.css">
+	<meta charset="UTF-8">
+	<title>wall of tacos</title>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="src/app.js"></script>
+	<script src="src/wall.js"></script>
+	<style>
 
-  <!-- 1. Load libraries -->
-  <!-- Polyfill(s) for older browsers -->
-  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+		tacowall {
+			width: 100%;
+			display: flex;
+		}
 
-  <script src="node_modules/zone.js/dist/zone.js"></script>
-  <script src="node_modules/reflect-metadata/Reflect.js"></script>
-  <script src="node_modules/systemjs/dist/system.src.js"></script>
+		taco {
+			max-width: 340px;
+			display: inline-block;
+			float: left;
+		}
 
-  <!-- 2. Configure SystemJS -->
-  <script src="systemjs.config.js"></script>
-  <script>
-    System.import('app').catch(function (err) {
-      console.error(err);
-    });
-  </script>
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	</style>
 </head>
+<body ng-app="tacowall" ng-controller="appController as appVm">
 
-<!-- 3. Display the application -->
-<body>
-<my-app>Loading...</my-app>
+<tacowall ingredients="appVm.listOfImages"></tacowall>
+
 </body>
 </html>
